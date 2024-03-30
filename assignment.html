@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #050210;
+        }
+
+        .senka {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            border-radius: 100%;
+            background: linear-gradient(#fb5dad 23%, #55fb9f 66%, #b97aff 100%);
+            animation-name: vrteska0;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            filter: blur(30px);
+        }
+
+        @keyframes vrteska0 {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .krug {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            border-radius: 100%;
+            background: linear-gradient(#fb5dad 23%, #55fb9f 66%, #b97aff 100%);
+            animation-name: vrteska;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+
+        }
+
+        @keyframes vrteska {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .krug::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            border-radius: 100%;
+            background-color: black;
+        }
+
+        .krugic {
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            border-radius: 100%;
+            background-color: #1c1a26a8;
+            animation-name: sirenje;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes sirenje {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="senka"></div>
+    <div class="krug">
+        <div class="krugic"></div>
+    </div>
+
+</body>
+
+</html>
